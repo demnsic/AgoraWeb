@@ -5,81 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ágora | Plataforma de Intercambio Estudiantil</title>
     
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!--Navegación-->
+ 
+    <!-- ══ HEADER ══════════════════════════════════════════════ -->
     <header>
         <div class="logo">
             <img src="img/Logo Agora color.png" alt="Logo Ágora">
             <span>Ágora</span>
         </div>
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#que-es">¿Qué es?</a>
-            <a href="#categorias">Categorías</a>
-            <a href="#como-funciona">¿Cómo funciona?</a>
+            <a href="#inicio" title="Inicio"><i class="fa-solid fa-house"></i></a>
+            <a href="#que-es" title="¿Qué es?"><i class="fa-solid fa-circle-question"></i></a>
+            <a href="#categorias" title="Categorías"><i class="fa-solid fa-layer-group"></i></a>
+            <a href="#como-funciona" title="¿Cómo funciona?"><i class="fa-solid fa-gears"></i></a>
+            <a href="#acceso" title="Acceso"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
-
-    <!--Sección Principal-->
+ 
+    <!-- ══ INICIO ═══════════════════════════════════════════════ -->
     <section id="inicio" class="seccion-dividida">
         <div class="contenido-texto">
             <h1>El punto de encuentro para el intercambio en el CECyT 9</h1>
-            <p>Encuentra los materiales que necesitas para este semestre, o dale una segunda vida a lo que ya no usas.</p> 
+            <p>Encuentra los materiales que necesitas para este semestre, o dale una segunda vida a lo que ya no usas.</p>
             <p>Ágora conecta a nuestra comunidad estudiantil.</p>
             <a href="#que-es" class="btn">Explorar la plataforma</a>
         </div>
         <div class="contenido-imagen">
-
-            <div class="imagen-placeholder">
-                <img src="img/InicioAgora.png" alt="Inicio Ágora" class="imagen-seccion">
-            </div>
+            <!-- Se quitó el div .imagen-placeholder como contenedor para evitar el borde punteado -->
+            <img src="img/InicioAgora.png" alt="Vista previa de la app Ágora" class="imagen-seccion">
         </div>
     </section>
-
-    <!--¿Qué es Ágora?-->
+ 
+    <!-- ══ QUÉ ES ════════════════════════════════════════════════ -->
     <section id="que-es" class="seccion-oscura">
         <div class="contenedor-centrado tarjeta-destacada">
             <h2>Mucho más que una app</h2>
             <p>
-            Ágora nace como una solución para facilitar el acceso a recursos escolares. 
-            Sabemos que conseguir todo el material escolar o educativo puede ser complicado. 
-            Aquí puedes intercambiar y comprar de forma segura con compañeros de otros semestres, 
-            <strong>fomentando el apoyo mutuo y reciclando herramientas.</strong>
+                Ágora nace como una solución para facilitar el acceso a recursos escolares.
+                Sabemos que conseguir todo el material escolar o educativo puede ser complicado.
+                Aquí puedes intercambiar y comprar de forma segura con compañeros de otros semestres,
+                <strong>fomentando el apoyo mutuo y reciclando herramientas.</strong>
             </p>
             <a href="#categorias" class="btn">Ver qué puedes conseguir en Ágora</a>
         </div>
     </section>
-
-    <!--Sección Categorías-->
+ 
+    <!-- ══ CATEGORÍAS ════════════════════════════════════════════ -->
     <section id="categorias" class="seccion-dividida invertida">
         <div class="contenido-imagen">
             <div class="grid-dos-imagenes">
                 <img src="img/LibrosAgora.png" alt="Libros de cálculo" class="imagen-seccion">
                 <img src="img/DibujoAgora.png" alt="Material de dibujo técnico" class="imagen-seccion">
             </div>
-            </div>
         </div>
         <div class="contenido-texto">
             <h2>¿Qué puedes encontrar?</h2>
             <ul class="lista-categorias">
                 <li><strong>Matemáticas y Física:</strong> Libros (como el Granville o el Stewart), calculadoras y formularios.</li>
-                <li><strong>Español e Inglés:</strong> Libros (Gateaway A1, A2, B1, y B2) y diccionarios.</li>
+                <li><strong>Español e Inglés:</strong> Libros (Gateaway A1, A2, B1 y B2) y diccionarios.</li>
                 <li><strong>Dibujo Técnico:</strong> Restiradores, escuadras, estilógrafos y hojas A3.</li>
                 <li><strong>Especialidad:</strong> Componentes y herramientas específicas.</li>
             </ul>
         </div>
     </section>
-
-    <!--Sección Cómo Funciona-->
+ 
+    <!-- ══ CÓMO FUNCIONA ═════════════════════════════════════════ -->
     <section id="como-funciona" class="seccion-clara">
         <h2>Intercambiar es muy fácil</h2>
         <div class="grid-pasos">
@@ -103,15 +100,316 @@
             </div>
         </div>
     </section>
-
-    <!--Footer-->
+ 
+    <!-- ══ ACCESO / FORMULARIO ═══════════════════════════════════ -->
+    <section id="acceso" class="seccion-formularios">
+        <h2>Accede o regístrate para recibir novedades de Ágora</h2>
+        <div class="grid-formularios">
+ 
+            <!-- Formulario de login/registro -->
+            <div class="tarjeta-formulario" id="contenedor-form">
+                <h3>Iniciar sesión / Registro</h3>
+                <form id="auth-form" novalidate>
+ 
+                    <div class="campo">
+                        <label for="auth-email">Correo institucional</label>
+                        <input
+                            type="email"
+                            id="auth-email"
+                            placeholder="usuario@alumno.ipn.mx"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+ 
+                    <div class="campo">
+                        <label for="auth-password">Contraseña</label>
+                        <input
+                            type="password"
+                            id="auth-password"
+                            placeholder="Mínimo 6 caracteres"
+                            required
+                            autocomplete="current-password"
+                            minlength="6"
+                        >
+                        <!-- Indicador de fuerza de contraseña (aparece al escribir) -->
+                        <div class="fuerza-container" id="fuerza-container">
+                            <div class="fuerza-barra">
+                                <div class="fuerza-relleno" id="fuerza-relleno"></div>
+                            </div>
+                            <span class="fuerza-texto" id="fuerza-texto"></span>
+                        </div>
+                    </div>
+ 
+                    <div class="botones-form">
+                        <button type="submit" id="btn-login" class="btn">Ingresar</button>
+                        <button type="button" id="btn-registro" class="btn btn-secundario">Registrarse</button>
+                    </div>
+                </form>
+ 
+                <!-- Mensaje de feedback (reemplaza los alert()) -->
+                <div class="mensaje-auth" id="mensaje-auth"></div>
+            </div>
+ 
+            <!-- Panel que aparece cuando el usuario ya inició sesión -->
+            <div class="panel-usuario" id="panel-usuario">
+                <h3>✓ Sesión iniciada</h3>
+                <p>Conectado como:<br><span class="email-usuario" id="email-mostrado"></span></p>
+                <p>Recibirás noticias sobre el lanzamiento de Ágora en tu correo.</p>
+                <button class="btn-cerrar-sesion" id="btn-cerrar-sesion">Cerrar sesión</button>
+            </div>
+ 
+        </div>
+    </section>
+ 
+    <!-- ══ FOOTER ════════════════════════════════════════════════ -->
     <footer>
-        <div class="footer-contenido">
-            <h2>Ágora</h2>
-            <p>Plataforma de intercambio y venta de materiales escolares.</p>
-            <p class="proyecto-info">Laboratiorio de Desarrollo de Software II | 2026 | CECyT 9 "Juan de Dios Bátiz"</p>
+<div class="footer-grid">
+            <div class="footer-columna">
+                <div class="logo-footer">
+                    <img src="img/Logo AgoraSin.png" alt="Logo Ágora">
+                    <h2>Ágora</h2>
+                </div>
+                <p>La plataforma oficial de intercambio y venta de materiales escolares para la comunidad del CECyT 9.</p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Legal</h3>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Aviso de Privacidad</a>
+                <a href="#">Reglas de Intercambio</a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Contacto</h3>
+                <p><i class="fa-solid fa-envelope"></i> soporte@agora.cecyt9.mx</p>
+                <p><i class="fa-solid fa-location-dot"></i> Mar Mediterráneo 227</p>
+            </div>
+
+            <div class="footer-columna redes-sociales">
+                <h3>Síguenos</h3>
+                <div class="iconos-redes">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="proyecto-info">Laboratorio de Desarrollo de Software II | 2026 | CECyT 9 "Juan de Dios Bátiz"</p>
         </div>
     </footer>
-
+ 
+    <!-- ══ FIREBASE + LÓGICA DE AUTENTICACIÓN ═══════════════════ -->
+    <script type="module">
+        import { initializeApp }                            from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getAuth,
+                 createUserWithEmailAndPassword,
+                 signInWithEmailAndPassword,
+                 signOut,
+                 onAuthStateChanged }                       from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+ 
+        // ── Configuración de Firebase ──────────────────────────────
+        // Reemplaza los valores entre comillas con los de tu proyecto en Firebase Console:
+        // Firebase Console → Configuración del proyecto → Tus apps → SDK config
+        const firebaseConfig = {
+            apiKey:            "AIzaSyBtAtf7_8aCTu4h1hfmLebWL3Z-OHARZZs",
+            authDomain:        "agora-6870f.firebaseapp.com",
+            projectId:         "agora-6870f",
+            storageBucket:     "agora-6870f.appspot.com",
+            messagingSenderId: "12063266308",
+            appId:             "1:12063266308:web:e875dd7468fa92af688751"
+        };
+ 
+        const app  = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+ 
+        // ── Referencias al DOM ─────────────────────────────────────
+        const authForm        = document.getElementById("auth-form");
+        const btnLogin        = document.getElementById("btn-login");
+        const btnRegistro     = document.getElementById("btn-registro");
+        const btnCerrarSesion = document.getElementById("btn-cerrar-sesion");
+        const mensajeAuth     = document.getElementById("mensaje-auth");
+        const contenedorForm  = document.getElementById("contenedor-form");
+        const panelUsuario    = document.getElementById("panel-usuario");
+        const emailMostrado   = document.getElementById("email-mostrado");
+        const inputPassword   = document.getElementById("auth-password");
+        const fuerzaContainer = document.getElementById("fuerza-container");
+        const fuerzaRelleno   = document.getElementById("fuerza-relleno");
+        const fuerzaTexto     = document.getElementById("fuerza-texto");
+ 
+        // ── Función: mostrar mensaje de feedback en pantalla ───────
+        // (Reemplaza los alert() — mejor UX y más profesional)
+        function mostrarMensaje(texto, tipo) {
+            // tipo puede ser: "exito", "error" o "advertencia"
+            mensajeAuth.textContent   = texto;
+            mensajeAuth.className     = `mensaje-auth ${tipo}`;
+        }
+ 
+        // ── Función: validaciones de seguridad del lado cliente ────
+        // Estas validaciones dan retroalimentación inmediata al usuario.
+        // Firebase hace su propia validación en el servidor (Autenticación real).
+        function validarFormulario(email, password) {
+            // 1. Campos vacíos
+            if (!email || !password) {
+                mostrarMensaje("Por favor, completa todos los campos.", "advertencia");
+                return false;
+            }
+            // 2. Solo se permiten correos institucionales del IPN
+const regexEmail = /^[^\s@]+@alumno\.ipn\.mx$/;
+if (!regexEmail.test(email)) {
+    mostrarMensaje("Solo se permiten correos institucionales (@alumno.ipn.mx).", "advertencia");
+    return false;
+}
+            // 3. Contraseña mínima de 6 caracteres (requerido por Firebase Auth)
+            if (password.length < 6) {
+                mostrarMensaje("La contraseña debe tener al menos 6 caracteres.", "advertencia");
+                return false;
+            }
+            return true;
+        }
+ 
+        // ── Función: indicador visual de fuerza de contraseña ─────
+        // Mide la complejidad sin enviar nada al servidor (seguridad del cliente)
+        function evaluarFuerza(password) {
+            let puntos = 0;
+            if (password.length >= 6)  puntos++;   // Longitud mínima
+            if (password.length >= 10) puntos++;   // Longitud recomendada
+            if (/[A-Z]/.test(password)) puntos++;  // Mayúscula
+            if (/[0-9]/.test(password)) puntos++;  // Número
+            if (/[^A-Za-z0-9]/.test(password)) puntos++; // Carácter especial
+ 
+            const niveles = [
+                { ancho: "20%",  color: "#B43C3C", texto: "Muy débil"  },
+                { ancho: "40%",  color: "#C87D2A", texto: "Débil"      },
+                { ancho: "60%",  color: "#B8A020", texto: "Regular"    },
+                { ancho: "80%",  color: "#5B8A3C", texto: "Fuerte"     },
+                { ancho: "100%", color: "#2E6E3E", texto: "Muy fuerte" },
+            ];
+            const nivel = niveles[Math.min(puntos - 1, 4)] || niveles[0];
+ 
+            fuerzaContainer.style.display = "block";
+            fuerzaRelleno.style.width            = nivel.ancho;
+            fuerzaRelleno.style.backgroundColor  = nivel.color;
+            fuerzaTexto.textContent              = `Seguridad: ${nivel.texto}`;
+            fuerzaTexto.style.color              = nivel.color;
+        }
+ 
+        inputPassword.addEventListener("input", function() {
+            if (this.value.length > 0) {
+                evaluarFuerza(this.value);
+            } else {
+                fuerzaContainer.style.display = "none";
+            }
+        });
+ 
+        // ── Función: cambiar vista entre formulario y panel ────────
+        function mostrarPanelUsuario(email) {
+            contenedorForm.style.display = "none";
+            panelUsuario.classList.add("visible");
+            emailMostrado.textContent = email;
+        }
+ 
+        function mostrarFormulario() {
+            contenedorForm.style.display = "block";
+            panelUsuario.classList.remove("visible");
+        }
+ 
+        // ── Observer: detecta si ya hay sesión activa ──────────────
+        // Firebase guarda la sesión en el navegador; este listener la recupera
+        // automáticamente aunque el usuario recargue la página. (Confidencialidad)
+        onAuthStateChanged(auth, function(usuario) {
+            if (usuario) {
+                // Usuario ya autenticado → mostrar panel de bienvenida
+                mostrarPanelUsuario(usuario.email);
+            } else {
+                // No hay sesión activa → mostrar formulario
+                mostrarFormulario();
+            }
+        });
+ 
+        // ── LOGIN: validar credenciales contra Firebase ────────────
+        authForm.addEventListener("submit", function(evento) {
+            evento.preventDefault(); // Evita recarga de página
+            const email    = document.getElementById("auth-email").value.trim();
+            const password = document.getElementById("auth-password").value;
+ 
+            // Validación del lado cliente (retroalimentación inmediata)
+            if (!validarFormulario(email, password)) return;
+ 
+            // Deshabilitar botones mientras se procesa (evita doble clic)
+            btnLogin.disabled    = true;
+            btnRegistro.disabled = true;
+            btnLogin.textContent = "Verificando…";
+ 
+            // Envío a Firebase Auth (validación real del lado servidor)
+            signInWithEmailAndPassword(auth, email, password)
+                .then(function(resultado) {
+                    mostrarMensaje("", ""); // Limpiar mensajes previos
+                    // onAuthStateChanged se encargará de actualizar la vista
+                })
+                .catch(function(error) {
+                    // Traducir los códigos de error de Firebase a mensajes legibles
+                    const mensajes = {
+                        "auth/user-not-found":   "No existe una cuenta con ese correo.",
+                        "auth/wrong-password":   "Contraseña incorrecta. Intenta de nuevo.",
+                        "auth/invalid-email":    "El formato del correo no es válido.",
+                        "auth/too-many-requests":"Demasiados intentos fallidos. Espera un momento.",
+                        "auth/invalid-credential": "Correo o contraseña incorrectos."
+                    };
+                    const msg = mensajes[error.code] || "Error de autenticación: " + error.message;
+                    mostrarMensaje(msg, "error");
+                })
+                .finally(function() {
+                    // Restaurar botones siempre, haya éxito o error
+                    btnLogin.disabled    = false;
+                    btnRegistro.disabled = false;
+                    btnLogin.textContent = "Ingresar";
+                });
+        });
+ 
+        // ── REGISTRO: crear nuevo usuario en Firebase ──────────────
+        btnRegistro.addEventListener("click", function() {
+            const email    = document.getElementById("auth-email").value.trim();
+            const password = document.getElementById("auth-password").value;
+ 
+            // Validación del lado cliente
+            if (!validarFormulario(email, password)) return;
+ 
+            btnLogin.disabled    = true;
+            btnRegistro.disabled = true;
+            btnRegistro.textContent = "Registrando…";
+ 
+            createUserWithEmailAndPassword(auth, email, password)
+                .then(function(resultado) {
+                    mostrarMensaje("¡Registro exitoso! Ahora puedes iniciar sesión.", "exito");
+                    authForm.reset();
+                    fuerzaContainer.style.display = "none";
+                })
+                .catch(function(error) {
+                    const mensajes = {
+                        "auth/email-already-in-use": "Este correo ya tiene una cuenta registrada.",
+                        "auth/weak-password":        "La contraseña es muy débil (mínimo 6 caracteres).",
+                        "auth/invalid-email":        "El formato del correo no es válido."
+                    };
+                    const msg = mensajes[error.code] || "Error en el registro: " + error.message;
+                    mostrarMensaje(msg, "error");
+                })
+                .finally(function() {
+                    btnLogin.disabled    = false;
+                    btnRegistro.disabled = false;
+                    btnRegistro.textContent = "Registrarse";
+                });
+        });
+ 
+        // ── CERRAR SESIÓN ──────────────────────────────────────────
+        btnCerrarSesion.addEventListener("click", function() {
+            signOut(auth).then(function() {
+                mostrarMensaje("Sesión cerrada correctamente.", "exito");
+            });
+        });
+ 
+    </script>
 </body>
 </html>
